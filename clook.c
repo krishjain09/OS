@@ -26,9 +26,9 @@ int main(){
 			temp2++;
 		}
 	}
-	//sort queue1
-	for(i=0;i<temp1;i++){
-		for(j=0;j<temp1;j++){
+	//sort queue1 in ascending order
+	for(i=0;i<temp1-1;i++){
+		for(j=0;j<temp1-1;j++){
 			if(queue1[j]>queue1[j+1]){
 				temp=queue1[j];
 				queue1[j]=queue1[j+1];
@@ -37,9 +37,9 @@ int main(){
 		}
 	}
 	
-	//sort queue2
-	for(i=0;i<temp2;i++){
-		for(j=0;j<temp2;j++){
+	//sort queue2 in ascending order
+	for(i=0;i<temp2-1;i++){
+		for(j=0;j<temp2-1;j++){
 			if(queue2[j]>queue2[j+1]){
 				temp=queue2[j];
 				queue2[j]=queue2[j+1];
@@ -52,7 +52,7 @@ int main(){
 		queue[i]=queue1[j];
 	}
 	queue[i]=queue2[0];
-	
+	//copy contents of queue2 into queue
 	for(i=temp1+2,j=1;j<temp2;i++,j++){
 		queue[i]=queue2[j];
 	}
